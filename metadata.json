@@ -1,0 +1,6 @@
+{
+  "name": "Infinity Million Hub",
+  "description": "Central de Suporte, Comunidade e Networking exclusiva do ecossistema Infinity Million.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

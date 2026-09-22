@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #F8F4F0;
+    --bg-surface: #FFFFFF;
+    --bg-subtle: #FDFBFA;
+    --bg-sidebar: #EBE6E2;
+    --border-sidebar: #D7D0CB;
+    --border-subtle: #EBE6E2;
+    --border-gold: rgba(188, 145, 100, 0.4);
+    --gold-champagne: #BC9164;
+    --gold-bronze: #835629;
+    --dark-espresso: #312318;
+    --text-primary: #312318;
+    --text-secondary: #59595F;
+    --text-muted: #8E8984;
+    --accent-metal: #BFB6B0;
+  }
+
+  body {
+    font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F8F4F0;
+    color: #312318;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-brand {
+    font-family: 'Inter', 'Manrope', sans-serif;
+  }
+
+  .font-serif-luxury {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F4F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #D7D0CB;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BC9164;
+}
+
+/* Geometric Balance Metallic Gradients */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #BC9164 0%, #835629 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(90deg, #BC9164 0%, #835629 100%);
+}
+
+.gold-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(188, 145, 100, 0.25);
+}
+
+/* Geometric Balance Card Patterns */
+.card-luxury, .card-geometric {
+  background: #FFFFFF;
+  border: 1px solid #EBE6E2;
+  box-shadow: 0 10px 30px rgba(49, 35, 24, 0.05);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-luxury:hover, .card-geometric:hover {
+  border-color: #BC9164;
+  box-shadow: 0 14px 36px -4px rgba(49, 35, 24, 0.08), 0 4px 12px -2px rgba(188, 145, 100, 0.1);
+}
+
+.card-quick-access {
+  background-color: #FDFBFA;
+  border: 1px solid #EBE6E2;
+  transition: all 0.2s ease;
+}
+
+.card-quick-access:hover {
+  border-color: #BC9164;
+  transform: translateY(-1px);
+}
+
+/* Geometric balance decorative rings */
+.geometric-ring {
+  border: 1px solid rgba(188, 145, 100, 0.2);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+/* Subtle orbital line animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverse-spin-slow {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes float-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.04);
+  }
+}
+
+.animate-spin-orbital {
+  animation: spin-slow 90s linear infinite;
+}
+
+.animate-reverse-spin-orbital {
+  animation: reverse-spin-slow 120s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: float-pulse 8s ease-in-out infinite;
+}
